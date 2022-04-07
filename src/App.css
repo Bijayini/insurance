@@ -48,6 +48,6 @@
     margin: 0 auto;
 }
 
-.form-container {
+.form-container, .page-text {
     text-align: center;
 }

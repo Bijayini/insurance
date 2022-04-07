@@ -4,7 +4,7 @@ import './home.css';
 
 export const Home: FC = () => (
     <div className='page-container'>
-        <div className='home-page-text'>
+        <div className='page-text'>
             <h1>Welcome to Getsafe's Insurance</h1>
             <p>You can go ahead with below insurances:</p>
         </div>

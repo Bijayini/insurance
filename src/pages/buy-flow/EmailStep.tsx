@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Input } from '../components/input';
-import { Button } from '../components/button';
-import { validateEmail } from '../utils/validate-email';
+import { Input } from '../../components/input';
+import { Button } from '../../components/button';
+import { validateEmail } from '../../utils/validate-email';
 
 interface EmailStepProps {
     cb: (field: string, value: string) => void;
