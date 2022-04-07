@@ -3,7 +3,14 @@ export enum ProductIds {
   designIns = 'design_ins',
 }
 
-export const PRODUCT_IDS_TO_NAMES = {
-  [ProductIds.devIns]: 'Developer Insurance',
-  [ProductIds.designIns]: 'Designer Insurance',
+export const Products = {
+  [ProductIds.devIns]: {
+    name: 'Developer Insurance',
+    url: '/buy/insurance_developer',
+  },
+
+  [ProductIds.designIns]: {
+    name: 'Designer Insurance',
+    url: '/buy/insurance_design',
+  },
 }
