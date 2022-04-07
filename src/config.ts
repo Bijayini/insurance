@@ -6,11 +6,43 @@ export enum ProductIds {
 export const Products = {
     [ProductIds.devIns]: {
         name: 'Developer Insurance',
-        url: '/buy/insurance_dev'
+        url: '/buy/insurance_dev',
+        steps: [
+            {
+                name: 'email',
+                nextStep: 'age'
+            },
+            {
+                name: 'age',
+                nextStep: 'summary'
+            },
+            {
+                name: 'summary',
+                nextStep: ''
+            }
+        ]
     },
 
     [ProductIds.designIns]: {
         name: 'Designer Insurance',
-        url: '/buy/insurance_design'
+        url: '/buy/insurance_design',
+        steps: [
+            {
+                name: 'name',
+                nextStep: 'email'
+            },
+            {
+                name: 'email',
+                nextStep: 'age'
+            },
+            {
+                name: 'age',
+                nextStep: 'summary'
+            },
+            {
+                name: 'summary',
+                nextStep: ''
+            }
+        ]
     }
 };

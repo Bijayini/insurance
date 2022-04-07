@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { Input } from '../../components/input';
 import { Button } from '../../components/button';
 import { validateEmail } from '../../utils/validate-email';
+import { StepProps } from '../../global/type';
 
-interface EmailStepProps {
-    cb: (field: string, value: string) => void;
-}
-
-const EmailStep: React.FC<EmailStepProps> = props => {
+export const EmailStep: React.FC<StepProps> = props => {
     const [email, setEmail] = useState('');
+
     return (
         <div className='form-container'>
             <Input
@@ -26,5 +24,3 @@ const EmailStep: React.FC<EmailStepProps> = props => {
         </div>
     );
 };
-
-export default EmailStep;

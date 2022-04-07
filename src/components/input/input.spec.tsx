@@ -7,12 +7,12 @@ describe('<Input/>', () => {
         label: 'Age',
         handleChange: jest.fn(),
         hint: '>18',
-        'data-testid': 'input'
+        testId: 'some-input'
     };
 
     it('should render Input correctly with hint', () => {
         const { getByTestId, getByText } = render(<Input {...props} />);
-        const input = getByTestId('input');
+        const input = getByTestId('some-input');
 
         fireEvent.change(input, { target: { value: 15 } });
 
@@ -23,10 +23,14 @@ describe('<Input/>', () => {
     it('should render Input correctly without hint when hint is undefined in props', () => {
         const updatedProps = {
             ...props,
-            hint: undefined
+            hint: undefined,
+            testId: undefined
         };
-        const { queryByText } = render(<Input {...updatedProps} />);
+        const { queryByText, getByTestId } = render(
+            <Input {...updatedProps} />
+        );
 
         expect(queryByText(props.hint)).toBeFalsy();
+        expect(getByTestId('input')).toBeInTheDocument();
     });
 });

@@ -22,7 +22,7 @@ const App = () => {
                     <Route path={Products.design_ins.url} exact>
                         <BuyFlow productId={ProductIds.designIns} />
                     </Route>
-                    <Route path='/' exact>
+                    <Route path='/'>
                         <Home />
                     </Route>
                 </Switch>

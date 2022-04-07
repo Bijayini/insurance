@@ -6,6 +6,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
     label: string;
     value?: string;
     name: string;
+    testId?: string;
     hint?: string;
 }
 
@@ -16,6 +17,7 @@ export const Input: FC<Props> = ({
     value,
     name,
     hint,
+    testId,
     ...restProps
 }) => (
     <div className='input-wrapper'>
@@ -27,8 +29,13 @@ export const Input: FC<Props> = ({
             }}
             value={value}
             name={name}
+            data-testid={testId || 'input'}
             {...restProps}
         />
-        {!!hint && <span className='input-hint'>{hint}</span>}
+        {!!hint && (
+            <span className='input-hint' data-testid='input-hint'>
+                {hint}
+            </span>
+        )}
     </div>
 );
