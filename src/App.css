@@ -43,7 +43,11 @@
     }
 }
 
-.page-container {
+.page-container, .form-container {
     display: table;
     margin: 0 auto;
+}
+
+.form-container {
+    text-align: center;
 }

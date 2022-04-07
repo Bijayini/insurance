@@ -1,0 +1,12 @@
+.insurance-list {
+    display: table;
+    margin: 0 auto;
+}
+
+.insurance-list li {
+    padding: 5px 0;
+}
+
+.home-page-text {
+    text-align: center;
+}
